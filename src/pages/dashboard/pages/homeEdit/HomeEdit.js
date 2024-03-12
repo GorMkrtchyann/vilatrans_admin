@@ -11,7 +11,7 @@ const HomeEditContent = ({type}) => {
             case 'slider':
                 return setElement(<SlideEdit/>)
         }
-    }, [])
+    }, [type])
 
     return(element)
 }
