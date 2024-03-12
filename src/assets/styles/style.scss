@@ -1,0 +1,117 @@
+@import "vars";
+
+.sidebar-item{
+  transition: 0.2s;
+  &__list{
+    padding-left: 10px;
+    li{
+      padding: 8px 10px;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-transform: capitalize;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.1s;
+      &:hover, &.active{
+        background: rgba($green, 0.1);
+        color: $green;
+      }
+    }
+  }
+  &__btn{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
+.sidebar--border{
+  //border-right: 1px solid #000;
+  height: 100vh;
+  padding: 10px 20px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar{
+    width: 4px;
+    background: $bg-lgray;
+  }
+  &::-webkit-scrollbar-thumb{
+    background: $green;
+  }
+}
+
+.dashboard{
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.right_page{
+  padding-top: 30px;
+  &__breadcrumbs{
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: flex;
+    gap: 10px;
+    p{
+      &.active{
+        color: $green;
+      }
+    }
+  }
+  &__menuCards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    &__card{
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      color: $green;
+      box-shadow: 0 5px 10px 5px rgba(0,0,0, 0.1);
+      padding: 10px 20px;
+      border-radius: 10px;
+      svg{
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.blockForm{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  h3{
+    background: $green;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  &__forms{
+    display: flex;
+    gap: 20px;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: calc(100% / 3);
+    & > div{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 10px;
+    }
+    label{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
