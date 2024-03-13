@@ -68,7 +68,7 @@ export const Sidebar = () => {
     const [listMenu, setListMenu] = useState('')
 
     return (
-        <div className={'sidebar--border'}>
+        <div className={'sidebar--border'} style={{maxWidth: 280, minWidth: 280}}>
             <div className="brand-logo d-flex align-items-center justify-content-between">
                 <Link to={'/'} className="text-nowrap logo-img">
                     <img src={Images.logo} width="180" alt=""/>

@@ -5,6 +5,7 @@ import {Breadcrumbs, Typography} from "@mui/material";
 import {MenuWithCards} from "./MenuWithCards";
 import {useEffect, useState} from "react";
 import {HomeEdit} from "./pages/homeEdit/HomeEdit";
+import {Reviews} from "./pages/reviews/Reviews";
 
 
 const DashboardContent = () => {
@@ -15,8 +16,10 @@ const DashboardContent = () => {
         switch (params.item) {
             case 'home':
                 return setElement(<HomeEdit/>)
+            case 'reviews':
+                return setElement(<Reviews/>)
         }
-    }, [])
+    }, [params.item])
 
     return(element)
 }
