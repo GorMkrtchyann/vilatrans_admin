@@ -6,6 +6,10 @@ import {MenuWithCards} from "./MenuWithCards";
 import {useEffect, useState} from "react";
 import {HomeEdit} from "./pages/homeEdit/HomeEdit";
 import {Reviews} from "./pages/reviews/Reviews";
+import {Requests} from "./pages/requests/Requests";
+import {ContactEdit} from "./pages/contactEdit/ContactEdit";
+import {HeaderEdit} from "./pages/headerEdit/HeaderEdit";
+import {FooterEdit} from "./pages/footerEdit/FooterEdit";
 
 
 const DashboardContent = () => {
@@ -14,10 +18,18 @@ const DashboardContent = () => {
 
     useEffect(() => {
         switch (params.item) {
+            case 'header':
+                return setElement(<HeaderEdit/>)
+            case 'footer':
+                return setElement(<FooterEdit/>)
             case 'home':
                 return setElement(<HomeEdit/>)
+            case 'contact':
+                return setElement(<ContactEdit/>)
             case 'reviews':
                 return setElement(<Reviews/>)
+            case 'requests':
+                return setElement(<Requests/>)
         }
     }, [params.item])
 

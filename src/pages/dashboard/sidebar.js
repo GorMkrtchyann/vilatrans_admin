@@ -88,7 +88,7 @@ export const Sidebar = () => {
                         selected={listMenu === 'Pages'}
                         title={'Pages'}
                         icon={<IconLayoutDashboard/>}
-                        list={['home', 'about', 'services', 'contact', 'footer']}
+                        list={['header', 'home', 'about', 'services', 'contact', 'footer']}
                         setListMenu={setListMenu}
                     />
 
@@ -103,6 +103,7 @@ export const Sidebar = () => {
                     </div>
                 </ul>
             </nav>
+            <button className={'btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2'}>Log Out</button>
         </div>
     )
 }
