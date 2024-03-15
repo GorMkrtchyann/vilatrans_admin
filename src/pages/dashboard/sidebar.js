@@ -13,7 +13,6 @@ import {useNavigate} from "react-router";
 
 const SidebarList = ({title, list, icon, setListMenu, selected}) => {
     const [open, setOpen] = useState(false)
-    const [listItem, setListItem] = useState(-1)
     const navigate = useNavigate()
 
     const MainClick = (e) => {
