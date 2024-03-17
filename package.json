@@ -18,6 +18,7 @@
     "react-router": "^6.22.3",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
+    "react-virtuoso": "^4.7.2",
     "sass": "^1.71.1",
     "web-vitals": "^2.1.4"
   },
@@ -44,5 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/GorMkrtchyann/vilatrans_admin.git",
+  "author": "Hovhannisyan2112 <hovhannisyan.2112@mail.ru>",
+  "license": "MIT"
 }
