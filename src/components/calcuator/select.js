@@ -15,7 +15,7 @@ const MenuProps = {
 };
 
 
-export default function MultipleSelectPlaceholder({ select, setSelect }) {
+export default function MultipleSelectPlaceholder({edit, select, setSelect }) {
 
 
 
@@ -28,6 +28,7 @@ export default function MultipleSelectPlaceholder({ select, setSelect }) {
         <div className="form__select mb-2 "  >
             <FormControl sx={{ width: '100%', borderColor: "#e2e2e2", mb: "20px" }}>
                 <Select
+                disabled={Boolean(edit)}
                     sx={{
                         "&:focus": {
                             "&& .MuiOutlinedInput-notchedOutline": {
@@ -44,7 +45,7 @@ export default function MultipleSelectPlaceholder({ select, setSelect }) {
                             }
                         }
                     }}
-                    required
+                    required={!edit}
                     name={select.name || ''}
                     displayEmpty
                     input={<OutlinedInput required />}

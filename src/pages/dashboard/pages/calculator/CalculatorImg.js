@@ -15,7 +15,7 @@ export const CalculatorImg = () => {
     };
 
     useEffect(() => {
-        axios.get('http://localhost:8080/dashboard/pages/calculator/img')
+        axios.get('http://localhost:8080/pages/calculator/img')
             .then(res => setData(res.data.data[0]))
             .catch(err => console.log(err))
     }, []);
@@ -54,7 +54,7 @@ export const CalculatorImg = () => {
         setLoading(true)
         try {
             const imgData = await imgRender(selectedFile);
-            axios.patch('http://localhost:8080/dashboard/pages/calculator/img', { images: imgData, id: data._id })
+            axios.patch('http://localhost:8080/pages/calculator/img', { images: imgData, id: data._id })
                 .then(res => {
                     setLoading(false)
                     setOpen({
