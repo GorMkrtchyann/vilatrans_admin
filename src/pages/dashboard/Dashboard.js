@@ -1,11 +1,12 @@
-import {Sidebar} from "./sidebar";
-import {Link} from "react-router-dom";
-import {useParams} from "react-router";
-import {Breadcrumbs, Typography} from "@mui/material";
-import {MenuWithCards} from "./MenuWithCards";
-import {useEffect, useState} from "react";
-import {HomeEdit} from "./pages/homeEdit/HomeEdit";
-import {Reviews} from "./pages/reviews/Reviews";
+import { Sidebar } from "./sidebar";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router";
+import { Breadcrumbs, Typography } from "@mui/material";
+import { MenuWithCards } from "./MenuWithCards";
+import { useEffect, useState } from "react";
+import { HomeEdit } from "./pages/homeEdit/HomeEdit";
+import { Reviews } from "./pages/reviews/Reviews";
+import { Calculator } from "./pages/calculator/Calculator";
 
 
 const DashboardContent = () => {
@@ -15,13 +16,15 @@ const DashboardContent = () => {
     useEffect(() => {
         switch (params.item) {
             case 'home':
-                return setElement(<HomeEdit/>)
+                return setElement(<HomeEdit />)
             case 'reviews':
-                return setElement(<Reviews/>)
+                return setElement(<Reviews />)
+            case 'calculator':
+                return setElement(<Calculator/>)
         }
     }, [params.item])
 
-    return(element)
+    return (element)
 }
 
 export const Dashboard = () => {
@@ -29,7 +32,7 @@ export const Dashboard = () => {
 
     return (
         <div className="page-wrapper dashboard">
-            <Sidebar/>
+            <Sidebar />
 
             <div className="right_page">
                 <div className="right_page__breadcrumbs">
@@ -49,9 +52,9 @@ export const Dashboard = () => {
 
                 {
                     params.item ?
-                        <DashboardContent/>
+                        <DashboardContent />
                         :
-                        <MenuWithCards/>
+                        <MenuWithCards />
                 }
 
             </div>

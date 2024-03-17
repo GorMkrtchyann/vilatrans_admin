@@ -5,7 +5,7 @@ import {
     IconInfoSquareRounded,
     IconLayoutBottombar,
     IconMessage,
-    IconPhone
+    IconPhone,
 } from "@tabler/icons-react";
 import {useParams} from "react-router";
 
@@ -13,7 +13,8 @@ const Menus = {
     pages: [
         {icon: <IconHome />, title: 'Home'},
         {icon: <IconInfoSquareRounded />, title: 'about'},
-        {icon: <IconBrandAzure />, title: 'services'},
+        {icon: <IconBrandAzure />, title: 'services'},   
+        {icon:<IconCalculator/>, title:'Calculator'},
         {icon: <IconPhone />, title: 'contact'},
         {icon: <IconLayoutBottombar />, title: 'footer'},
     ],

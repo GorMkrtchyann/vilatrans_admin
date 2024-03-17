@@ -1,0 +1,52 @@
+.calculator {
+    position: relative;
+    .gap {
+        gap: 20px;
+    }
+
+    .wrap {
+        flex-wrap: wrap;
+    }
+td{text-transform: capitalize;}
+    table,
+    tr,
+    td,
+    th {
+        border: 1px solid rgb(142, 142, 142);
+    }
+
+    .font {
+        font-size: 26px;
+    }
+
+    table {
+        margin: 10px;
+    }
+
+    td {
+        padding: 10px
+    }
+
+
+    .text-wrap {
+        word-wrap: unset;
+        word-break: break-all;
+        text-wrap: nowrap !important;
+    }
+
+    .imageText {
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    .button {
+        background-color: #1976D2 !important;
+        color: white !important;
+        border-color: grey !important;
+        border-radius: 10px;
+
+        &:disabled {
+            background-color: #a1a8af;
+        }
+    }
+}
