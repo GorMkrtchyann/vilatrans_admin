@@ -4,6 +4,8 @@
 @import "../libs/simplebar.css";
 
 :root, [data-bs-theme=light] {
+    --vl-green: #28a745;
+    --vl-blue: #5D87FF;
     --bs-blue: #5D87FF;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
@@ -19233,7 +19235,7 @@ textarea.form-control-lg {
 }
 
 .sidebar-nav ul .sidebar-item.selected > .sidebar-link, .sidebar-nav ul .sidebar-item.selected > .sidebar-link.active, .sidebar-nav ul .sidebar-item > .sidebar-link.active {
-    background-color: #28a745;
+    background-color: var(--vl-blue);
     color: #fff
 }
 

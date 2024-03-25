@@ -1,35 +1,32 @@
 import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 import {useEffect, useState} from "react";
-import {SlideEdit} from "./slider/SlideEdit";
-import '../../../../assets/styles/home.scss'
-import ServicesEdit from "./services/ServicesEdit";
-import FeaturesEdit from "./features/FeaturesEdit";
-import MapEdit from "./MapEdit";
+import {OfficesInfo} from "./OfficesInfo";
+import {SlideEdit} from "../homeEdit/slider/SlideEdit";
+import {MapEdit} from "./MapEdit";
+import {BannerEdit} from "./BannerEdit";
 
-const HomeEditContent = ({type}) => {
+const ContactEditContent = ({type}) => {
     const [element, setElement] = useState(null)
 
     useEffect(() => {
         switch (type.toLowerCase()) {
-            case 'slider':
-                return setElement(<SlideEdit/>)
-            case 'services':
-                return setElement(<ServicesEdit/>)
-            case 'features':
-                return setElement(<FeaturesEdit/>)
+            case 'officesinfo':
+                return setElement(<OfficesInfo/>)
             case 'map':
                 return setElement(<MapEdit/>)
+            case 'banner':
+                return setElement(<BannerEdit/>)
         }
     }, [type])
 
     return(element)
 }
 
-export const HomeEdit = () => {
+export const ContactEdit = () => {
     const [type, setType] = useState('');
 
     return(
-        <div style={{width: '100%'}}>
+        <div>
             <FormControl fullWidth style={{marginBottom: 20}}>
                 <InputLabel id="demo-simple-select-label">Type</InputLabel>
                 <Select
@@ -39,14 +36,14 @@ export const HomeEdit = () => {
                     label="Type"
                     onChange={(event) => setType(event.target.value)}
                 >
-                    <MenuItem value={'slider'}>Slider</MenuItem>
-                    <MenuItem value={'services'}>Services</MenuItem>
-                    <MenuItem value={'features'}>Features</MenuItem>
+                    <MenuItem value={'officesInfo'}>Offices Info</MenuItem>
                     <MenuItem value={'map'}>Map</MenuItem>
+                    <MenuItem value={'banner'}>Banner</MenuItem>
                 </Select>
             </FormControl>
 
-            <HomeEditContent type={type}/>
+
+            <ContactEditContent type={type}/>
         </div>
     )
 }

@@ -1,190 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.footer-cont {
-    display: flex;
-}
-
-.btn-box {
-    padding: 8px;
-}
-
-.home-list {
-    min-width: calc(100% - 200px);
-    padding: 8px;
-    position: relative;
-    table {
-        width: 100%;
-        border-collapse: separate;
-        border-spacing: 0 5px;
-        tbody {
-            background-color: #f3f6f5;
-
-            tr {
-                transition: 500ms background-color;
-            }
-
-            tr:hover {
-                background-color: #9d9c9c;
-            }
-        }
-
-        .list-img {
-            height: 100%;
-        }
-
-        td {
-            max-width: 200px;
-            height: 60px;
-            padding: 5px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            font-weight: bold;
-            color: black;
-        }
-
-        .btn-td {
-            display: flex;
-            height: 60px;
-            align-items: center;
-            justify-content: space-around;
-            div {
-                width: 50px;
-                height: 30px;
-                border-radius: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-            }
-
-            div:nth-child(1) {
-                background-color: #D11A2A;
-            }
-
-            div:nth-child(2) {
-                background-color: #28a745;
-            }
-        }
-
-        th {
-            padding: 5px;
-            text-align: center;
-        }
+.blockForm__table__body__item {
+    .hidden-lists {
+        width: 200px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: center;
+    }
+    div {
+        width: 200px;
     }
 
-    .edit-area {
-        position: absolute;
-        background-color: #f3f6f5;
-        width: 100%;
-        padding: 20px;
-        border-radius: 20px;
-        top: 0;
-        left: 0;
-        .close-icon {
-            border: none;
-            width: min-content;
-            height: min-content;
-            position: absolute;
-            right: 20px;
-            top: 10px;
-            cursor: pointer;
-            z-index: 3;
-        }
-        .edited-img {
-            width: 250px;
-        }
+    div:nth-last-child(1) {
+        text-align: end;
     }
 }
 
-.green-btn {
-    background-color: #28a745;
-    border: 1px solid #28a745;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.green-btn:hover {
-    background-color: #186e2a;
-    border: 1px solid #28a745;
-}
-
-.img-lab {
-    align-items: center;
-    position: relative;
-    min-height: 70px;
-    .img-inp {
-        opacity: 0;
-    }
-    .upload-icon {
-        width: 100%;
-        height: 50px;
-        border: 1px solid #28a745;
-        border-radius: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-        background-color: #28a745;
-        font-weight: bold;
-        color: white;
-        cursor: pointer;
-        position: absolute;
-        top: 30px;
-        left: 0;
-        transition: 300ms background-color;
+.blockForm__table__header {
+    h6 {
+        width: 200px;
     }
 
-    .upload-icon:hover {
-        background-color: #186e2a;
+    h6:nth-last-child(1) {
+        text-align: end;
+        padding-right: 30px;
     }
-
-    .slide-img {
-        width: 250px;
-        margin-top: 50px;
-    }
-}
-
-.edit-area {
-    .img-lab {
-        align-items: center;
-        position: relative;
-        min-height: 70px;
-        .img-inp {
-            opacity: 0;
-        }
-        .upload-icon {
-            width: 50%;
-            height: 50px;
-            border: 1px solid #28a745;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-            background-color: #28a745;
-            font-weight: bold;
-            color: white;
-            cursor: pointer;
-            position: absolute;
-            top: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: 300ms background-color;
-        }
-
-        .upload-icon:hover {
-            background-color: #186e2a;
-        }
-        .edited-img {
-            width: 250px;
-            margin-top: 50px;
-        }
+    h6:not(:nth-child(1), :nth-last-child(1)) {
+        text-align: center;
     }
 }

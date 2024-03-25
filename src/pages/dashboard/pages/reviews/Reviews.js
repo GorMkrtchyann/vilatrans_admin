@@ -1,6 +1,7 @@
-import {Avatar} from "@mui/material";
+import {Avatar, LinearProgress} from "@mui/material";
 import {IconCalendar, IconChevronDown} from "@tabler/icons-react";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 
 const ReviewsAccordion = ({data}) => {
@@ -40,31 +41,29 @@ const ReviewsAccordion = ({data}) => {
 }
 
 export const Reviews = () => {
+    const [reviewsList, setReviewsList] = useState(null)
 
+    useEffect(() => {
+        axios.get('http://localhost:8080/contact/getAllReviews').then(r => {
+            if (!r.data.error){
+                setReviewsList(r.data)
+            }
+            // console.log(r)
+        })
+    }, [])
 
     return(
-        <div>
-            <ReviewsAccordion
-                data={{
-                    name: 'Mayranush',
-                    subject: 'Lorem ipsum is the best',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum ipsum laborum quae voluptas. Beatae explicabo hic incidunt quae voluptas. Ab aliquid cumque earum, magni minus nobis quis rem ut?',
-                    date: "01.03.2024",
-                    phone: '+3242352352',
-                    email: 'asdasda@dasda.asda'
-                }}
-            />
-
-            <ReviewsAccordion
-                data={{
-                    name: 'Tsovak',
-                    subject: 'Lorem ipsum is the best',
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum ipsum laborum quae voluptas. Beatae explicabo hic incidunt quae voluptas. Ab aliquid cumque earum, magni minus nobis quis rem ut?',
-                    date: "01.03.2024",
-                    phone: '+3242352352',
-                    email: 'asdasda@dasda.asda'
-                }}
-            />
-        </div>
+        reviewsList ?
+            <div>
+                {
+                    reviewsList?.map(el => (
+                        <ReviewsAccordion
+                            data={el}
+                        />
+                    ))
+                }
+            </div>
+            :
+            <LinearProgress />
     )
 }

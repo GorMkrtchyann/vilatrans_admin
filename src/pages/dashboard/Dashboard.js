@@ -1,14 +1,15 @@
-import { Sidebar } from "./sidebar";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router";
-import { Breadcrumbs, Typography } from "@mui/material";
-import { MenuWithCards } from "./MenuWithCards";
-import { useEffect, useState } from "react";
-import { HomeEdit } from "./pages/homeEdit/HomeEdit";
-import { Reviews } from "./pages/reviews/Reviews";
-import { Calculator } from "./pages/calculator/Calculator";
+import {Sidebar} from "./sidebar";
+import {useParams} from "react-router";
+import {MenuWithCards} from "./MenuWithCards";
+import {useEffect, useState} from "react";
+import {HomeEdit} from "./pages/homeEdit/HomeEdit";
+import {Reviews} from "./pages/reviews/Reviews";
+import {Requests} from "./pages/requests/Requests";
+import {ContactEdit} from "./pages/contactEdit/ContactEdit";
+import {HeaderEdit} from "./pages/headerEdit/HeaderEdit";
+import {FooterEdit} from "./pages/footerEdit/FooterEdit";
 import { ServicePage } from "./pages/servicePage/Service";
-
+import {Calculator} from "../dashboard/pages/calculator/Calculator"
 
 const DashboardContent = () => {
     const params = useParams()
@@ -16,7 +17,18 @@ const DashboardContent = () => {
 
     useEffect(() => {
         switch (params.item) {
+            case 'header':
+                return setElement(<HeaderEdit/>)
+            case 'footer':
+                return setElement(<FooterEdit/>)
             case 'home':
+                return setElement(<HomeEdit/>)
+            case 'contact':
+                return setElement(<ContactEdit/>)
+            case 'reviews':
+                return setElement(<Reviews/>)
+            case 'requests':
+                return setElement(<Requests/>)
                 return setElement(<HomeEdit />)
             case 'reviews':
                 return setElement(<Reviews />)

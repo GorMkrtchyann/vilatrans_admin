@@ -102,6 +102,7 @@ export const Sidebar = () => {
                     </div>
                 </ul>
             </nav>
+            <button className={'btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2'}>Log Out</button>
         </div>
     )
 }
