@@ -87,7 +87,11 @@ export const Sidebar = () => {
                         selected={listMenu === 'Pages'}
                         title={'Pages'}
                         icon={<IconLayoutDashboard/>}
+<<<<<<< HEAD
                         list={['header', 'home', 'about', 'services', 'contact', 'footer']}
+=======
+                        list={['home', 'about', 'services', 'calculator', 'contact', 'footer']}
+>>>>>>> 454d8f2f0d601644781f66d9c1a01ae2f20347e8
                         setListMenu={setListMenu}
                     />
 

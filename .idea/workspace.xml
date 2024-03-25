@@ -4,35 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f07e39d0-fa26-48d4-9cc6-b124a125d577" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/styles/features.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/styles/home.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dashboard/pages/homeEdit/ErrorAlert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dashboard/pages/homeEdit/Loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dashboard/pages/homeEdit/MapEdit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dashboard/pages/homeEdit/features/DescSection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dashboard/pages/homeEdit/features/SectionControll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dashboard/pages/homeEdit/services/ServicesReview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/dashboard/pages/homeEdit/services/TextSection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/fileUploadInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/fileUploadInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dashboard/MenuWithCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboard/MenuWithCards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dashboard/pages/contactEdit/ContactEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboard/pages/contactEdit/ContactEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dashboard/pages/headerEdit/LogoEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboard/pages/headerEdit/LogoEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dashboard/pages/homeEdit/HomeEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboard/pages/homeEdit/HomeEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dashboard/pages/homeEdit/SlideEdit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dashboard/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dashboard/sidebar.js" afterDir="false" />
-    </list>
+    <list default="true" id="f07e39d0-fa26-48d4-9cc6-b124a125d577" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,21 +28,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Merging master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.1.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.1.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -84,7 +56,7 @@
       <workItem from="1710832300509" duration="38299000" />
       <workItem from="1710925634853" duration="6640000" />
       <workItem from="1710933148874" duration="63114000" />
-      <workItem from="1711351123561" duration="24908000" />
+      <workItem from="1711351123561" duration="25214000" />
     </task>
     <servers />
   </component>
