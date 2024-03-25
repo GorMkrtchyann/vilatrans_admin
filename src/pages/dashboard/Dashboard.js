@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { HomeEdit } from "./pages/homeEdit/HomeEdit";
 import { Reviews } from "./pages/reviews/Reviews";
 import { Calculator } from "./pages/calculator/Calculator";
+import { ServicePage } from "./pages/servicePage/Service";
 
 
 const DashboardContent = () => {
@@ -20,7 +21,9 @@ const DashboardContent = () => {
             case 'reviews':
                 return setElement(<Reviews />)
             case 'calculator':
-                return setElement(<Calculator/>)
+                return setElement(<Calculator />)
+            case 'services':
+                return setElement(<ServicePage />)
         }
     }, [params.item])
 

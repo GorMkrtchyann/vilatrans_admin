@@ -2,7 +2,7 @@ import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 import {useEffect, useState} from "react";
 import {SlideEdit} from "./SlideEdit";
 import '../../../../assets/styles/home.scss'
-import ServicesEdit from "./ServicesEdit";
+import {ServicesEdit} from "./ServicesEdit";
 import FeaturesEdit from "./FeaturesEdit";
 import LeaveServicesEdit from "./LeaveServicesEdit";
 import MapEdit from "./MapEdit";

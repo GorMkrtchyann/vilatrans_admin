@@ -1,0 +1,258 @@
+@use "vars";
+
+.service {
+    padding: 10px;
+
+    .input-div {
+        display: flex;
+        padding-left: 10px;
+    }
+
+    .transport-title {
+        margin: 50px 0;
+    }
+    .wrap{
+        flex-wrap: wrap;
+    }
+
+    .offset-50 {
+        margin-bottom: -50px !important;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .offset-50 {
+        margin-bottom: -50px !important;
+    }
+
+    .icon-item__text {
+        margin-top: 16px;
+    }
+
+    section {
+        position: relative;
+    }
+
+    .t50 {
+        bottom: auto;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .section-size {
+        padding: 50px 0;
+        margin: 50px 0;
+    }
+
+    .container-steps {
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin: 0 auto;
+        max-width: 1440px;
+        width: 80%;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .center-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+    }
+
+    .heading__title {
+        color: vars.$dgray;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 0;
+        z-index: 1;
+        position: relative;
+        font-weight: 700;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .heading__title {
+            font-size: 40px;
+            line-height: 45px;
+        }
+    }
+
+    .form-section {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .icon-item__img {
+        margin-bottom: 24px;
+    }
+
+    .icon-item__img img {
+        max-height: 70px;
+        width: auto;
+    }
+
+    .icon-item__img--small {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 60px;
+    }
+
+    .icon-item__img--small img {
+        max-height: 60px;
+        max-width: 110px;
+        margin-top: auto;
+    }
+
+    .text-form {
+        max-width: 80%;
+        background-color: vars.$bg-lgray;
+        padding: 10px;
+        flex-grow: 1;
+    }
+
+    .bg--gray {
+        background-color: vars.$bg-dgray;
+    }
+
+    .box-count--green {
+        color: vars.$green;
+    }
+
+    .icon-item--white {
+        color: #fff;
+    }
+
+    .icon-item__title {
+        color: white;
+        font-weight: 700;
+    }
+
+    .icon-item {
+        margin-bottom: 50px;
+    }
+
+    .heading {
+        position: relative;
+    }
+
+    .r0 {
+        right: 0;
+    }
+
+    .bottom-70 {
+        margin-bottom: 50px !important;
+    }
+
+    .heading--white {
+        color: #fff;
+    }
+
+    .section--bg {
+        position: absolute;
+        z-index: 0;
+    }
+
+    .heading__pre-title {
+        display: inline-block;
+        color: #a9aeb3;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 17px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .heading__title {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 0;
+        z-index: 1;
+        position: relative;
+    }
+
+    .icon-item__count,
+    .icon-item__img {
+        margin-bottom: 24px;
+    }
+
+    .icon-item__count span {
+        font-size: 100px;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        line-height: 1;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .service-file {
+        background-color: vars.$bg-lgray;
+        padding: 20px;
+
+        &>div {
+            width: 100%;
+        }
+    }
+
+    .button {
+        margin: 20px 10px;
+        padding: 10px 20px;
+    }
+
+    form {
+        min-width: 300px;
+    }
+
+    .input-title {
+        padding-right: 10px;
+        background-color: vars.$bg-lgray;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .accordion-div {
+        padding: 2px;
+        overflow: hidden;
+        padding-right: 10px;
+        display: flex;
+        background-color: white;
+        border-radius: 10px !important;
+        margin-bottom: 15px;
+        box-shadow:
+            0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+            0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    .visibility-icon {
+        margin: 12px 0;
+        cursor: pointer;
+    }
+
+    .accordion {
+        box-shadow: none;
+        border: none !important;
+        flex-grow: 1 !important;
+    }
+}

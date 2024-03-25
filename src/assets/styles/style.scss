@@ -1,10 +1,15 @@
 @import "vars";
+@import "service";
+@import "textEditor";
 
-.sidebar-item{
+
+.sidebar-item {
   transition: 0.2s;
-  &__list{
+
+  &__list {
     padding-left: 10px;
-    li{
+
+    li {
       padding: 8px 10px;
       margin-top: 10px;
       display: flex;
@@ -14,79 +19,91 @@
       border-radius: 8px;
       cursor: pointer;
       transition: 0.1s;
-      &:hover, &.active{
+
+      &:hover,
+      &.active {
         background: rgba($green, 0.1);
         color: $green;
       }
     }
   }
-  &__btn{
+
+  &__btn {
     display: flex;
     align-items: center;
     gap: 15px;
   }
 }
-.sidebar--border{
+
+.sidebar--border {
   //border-right: 1px solid #000;
   height: 100vh;
   padding: 10px 20px;
   overflow-y: scroll;
-  &::-webkit-scrollbar{
+
+  &::-webkit-scrollbar {
     width: 4px;
     background: $bg-lgray;
   }
-  &::-webkit-scrollbar-thumb{
+
+  &::-webkit-scrollbar-thumb {
     background: $green;
   }
 }
 
-.dashboard{
+.dashboard {
   display: flex;
-  //gap: 30px;
   align-items: flex-start;
 }
 
-.right_page{
+.right_page {
   padding: 30px;
   box-sizing: border-box;
   width: 100%;
   overflow-y: scroll;
   height: 100vh;
-  &::-webkit-scrollbar{
+
+  &::-webkit-scrollbar {
     width: 10px;
     background: $lgray;
   }
-  &::-webkit-scrollbar-thumb{
+
+  &::-webkit-scrollbar-thumb {
     background: $green;
     border-radius: 20px;
   }
-  &__breadcrumbs{
+
+  &__breadcrumbs {
     font-size: 24px;
     font-weight: 600;
     text-transform: capitalize;
     display: flex;
     gap: 10px;
-    p{
-      &.active{
+
+    p {
+      &.active {
         color: $green;
       }
     }
   }
-  &__menuCards{
+
+  &__menuCards {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    &__card{
+
+    &__card {
       font-size: 16px;
       display: flex;
       align-items: center;
       gap: 10px;
       font-weight: 500;
       color: $green;
-      box-shadow: 0 5px 10px 5px rgba(0,0,0, 0.1);
+      box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
       padding: 10px 20px;
       border-radius: 10px;
-      svg{
+
+      svg {
         width: 20px;
         height: 20px;
       }
@@ -94,86 +111,101 @@
   }
 }
 
-.blockForm{
+.blockForm {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  h3{
+
+  h3 {
     background: $green;
     color: #fff;
     padding: 5px 10px;
     border-radius: 20px;
   }
-  &__forms{
+
+  &__forms {
     display: flex;
     gap: 20px;
   }
-  form{
+
+  form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     //width: calc(100% / 3);
-    & > div{
+    &>div {
       display: flex;
       flex-direction: column;
       gap: 10px;
       border: 1px solid rgba(0, 0, 0, 0.2);
       padding: 10px;
     }
-    label{
+
+    label {
       display: flex !important;
     }
   }
 }
 
-.review_accordion{
+.review_accordion {
   background: $bg-lgray;
   padding: 15px;
   box-sizing: border-box;
   border-radius: 10px;
   width: 100%;
   margin-bottom: 20px;
-  p{
+
+  p {
     margin: 0;
   }
-  &__header{
+
+  &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    & > div{
+
+    &>div {
       display: flex;
       align-items: center;
       gap: 10px;
-      b{
+
+      b {
         font-size: 16px;
       }
     }
-    &__calendar{
+
+    &__calendar {
       display: flex;
       align-items: center;
       gap: 5px;
       margin-left: 5px;
     }
   }
-  &__content{
+
+  &__content {
     padding-top: 20px;
-    ul{
-      li{
+
+    ul {
+      li {
         margin-bottom: 4px;
-        a{
+
+        a {
           color: $bgrey;
           font-weight: 400;
         }
-        span{
+
+        span {
           color: $green;
           font-weight: 500;
           margin-right: 5px;
         }
       }
     }
-    p{
+
+    p {
       font-size: 15px;
     }
   }

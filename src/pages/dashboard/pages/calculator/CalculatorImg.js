@@ -15,7 +15,7 @@ export const CalculatorImg = () => {
     };
 
     useEffect(() => {
-        axios.get('http://localhost:8080/pages/calculator/img')
+        axios.get('http://localhost:8080/dashboard/pages/calculator/img')
             .then(res => setData(res.data.data[0]))
             .catch(err => console.log(err))
     }, []);
@@ -31,11 +31,12 @@ export const CalculatorImg = () => {
 
         }
         if (!selectedFile.type.startsWith('image/')) {
-            return setOpen({       
+            return setOpen({
+                ...{
                     openAlert: true,
                     status: 'error',
                     message: 'Error please select an image file'
-                
+                }
             })
 
         }
@@ -54,32 +55,37 @@ export const CalculatorImg = () => {
         setLoading(true)
         try {
             const imgData = await imgRender(selectedFile);
-            axios.patch('http://localhost:8080/pages/calculator/img', { images: imgData, id: data._id })
+            axios.patch('http://localhost:8080/dashboard/pages/calculator/img', { images: imgData, id: data._id })
                 .then(res => {
                     setLoading(false)
                     setOpen({
+                        ...{
                             openAlert: true,
                             status: 'successfully',
                             message: 'successfully'
+                        }
                     })
                     setData(res.data.data)
                 })
                 .catch(res => {
                     setLoading(false)
                     setOpen({
+                        ...{
                             openAlert: true,
                             status: 'error',
                             message: 'Error please open console'
+                        }
                     })
                     console.log(res)
                 })
         } catch (error) {
             setLoading(false)
             setOpen({
+                ...{
                     openAlert: true,
                     status: 'error',
                     message: 'Error please open console'
-                
+                }
             })
             console.error(error);
         }

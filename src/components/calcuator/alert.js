@@ -22,7 +22,7 @@ export default function CustomizedSnackbars({ open, setOpen }) {
                 {status === 'successfully' ? <Alert onClose={handleClose} severity="success">
                     {message || 'Ssuccessfully'}
                 </Alert>
-                    : status === 'error'?<Alert severity="error">{message || 'Error'}</Alert>:null}
+                    : status === 'error' ? <Alert severity="error">{message || 'Error'}</Alert> : null}
             </Snackbar>
         </div>
     );

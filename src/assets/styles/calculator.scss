@@ -1,13 +1,30 @@
+@use './vars.scss/' as vars;
+
 .calculator {
     position: relative;
-    .gap {
-        gap: 20px;
+
+    .table-div {
+        max-height: 355px;
+        overflow-y: auto;
+
+    }
+
+    .delete {
+        background-color: red !important;
+    }
+
+    .send {
+        background-color: vars.$green !important;
     }
 
     .wrap {
         flex-wrap: wrap;
     }
-td{text-transform: capitalize;}
+
+    td {
+        text-transform: capitalize;
+    }
+
     table,
     tr,
     td,
@@ -40,7 +57,7 @@ td{text-transform: capitalize;}
     }
 
     .button {
-        background-color: #1976D2 !important;
+        background-color: #1976D2;
         color: white !important;
         border-color: grey !important;
         border-radius: 10px;
