@@ -1,7 +1,10 @@
 import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 import {useEffect, useState} from "react";
-import {useParams} from "react-router";
-import {SlideEdit} from "./SlideEdit";
+import {SlideEdit} from "./slider/SlideEdit";
+import '../../../../assets/styles/home.scss'
+import ServicesEdit from "./services/ServicesEdit";
+import FeaturesEdit from "./features/FeaturesEdit";
+import MapEdit from "./MapEdit";
 
 const HomeEditContent = ({type}) => {
     const [element, setElement] = useState(null)
@@ -10,6 +13,12 @@ const HomeEditContent = ({type}) => {
         switch (type.toLowerCase()) {
             case 'slider':
                 return setElement(<SlideEdit/>)
+            case 'services':
+                return setElement(<ServicesEdit/>)
+            case 'features':
+                return setElement(<FeaturesEdit/>)
+            case 'map':
+                return setElement(<MapEdit/>)
         }
     }, [type])
 
@@ -31,6 +40,9 @@ export const HomeEdit = () => {
                     onChange={(event) => setType(event.target.value)}
                 >
                     <MenuItem value={'slider'}>Slider</MenuItem>
+                    <MenuItem value={'services'}>Services</MenuItem>
+                    <MenuItem value={'features'}>Features</MenuItem>
+                    <MenuItem value={'map'}>Map</MenuItem>
                 </Select>
             </FormControl>
 

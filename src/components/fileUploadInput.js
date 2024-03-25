@@ -1,15 +1,15 @@
 import {IconCloudUpload} from "@tabler/icons-react";
 
 
-export const FileUploadInput = ({ImageChange, inputRef}) => {
+export const FileUploadInput = ({onChange, inputRef, text = 'Upload File', required = true}) => {
 
 
     return(
         <div className={'uploadFile'}>
             <IconCloudUpload />
-            <p>Upload Image</p>
-            <input type="file" onChange={(e) => ImageChange(e.target.files)} required
-                   ref={inputRef}
+            <p>{text}</p>
+            <input type="file" onChange={(e) => onChange(e.target.files)}
+                   ref={inputRef} required={required}
             />
         </div>
     )

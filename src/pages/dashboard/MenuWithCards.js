@@ -33,7 +33,7 @@ export const MenuWithCards = () => {
 
             {
                 Menus[params.type]?.map((el, i) => (
-                    <Link to={'/'} className="right_page__menuCards__card">
+                    <Link key={i} to={'/'} className="right_page__menuCards__card">
                         {el.icon}
                         <span>{el.title}</span>
                     </Link>

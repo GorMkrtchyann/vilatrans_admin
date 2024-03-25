@@ -6,6 +6,7 @@ function App() {
   return (
       <div>
         <Routes>
+          <Route path={'/login'} element={<Login/>}/>
           <Route path={'/dashboard'} element={<Dashboard/>}/>
           <Route path={'/dashboard/:type'} element={<Dashboard/>}/>
           <Route path={'/dashboard/:type/:item'} element={<Dashboard/>}/>

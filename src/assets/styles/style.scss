@@ -1,4 +1,5 @@
 @import "vars";
+@import "../libs/helper.min";
 
 .vl-btn{
   padding: 8px 16px;
@@ -142,31 +143,92 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  h3{
-    background: $blue;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 20px;
-  }
   &__forms{
     display: flex;
+    flex-direction: column;
     gap: 20px;
+    width: 100%;
+    &__inputsDiv{
+      display: flex;
+      width: 100%;
+
+      & > div{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 0 20px;
+        width: 300px;
+        img{
+          width: 100%;
+        }
+        &:last-child{
+          border: none;
+        }
+      }
+      label{
+        display: flex !important;
+      }
+    }
+    &__btns, button{
+      align-self: flex-end;
+      margin-right: 10px;
+    }
+    &__btns{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
   }
   form{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: calc(100% / 3);
-    & > div{
+    background: $bg-lgray;
+    border-radius: 10px;
+    padding: 20px 10px;
+  }
+  &__table{
+    margin-top: 30px;
+    &__header{
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-      padding: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      h6{
+        font-size: 15px;
+      }
     }
-    label{
-      display: flex;
-      flex-direction: column;
+    &__body{
+      &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background: $bg-lgray;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        video, img{
+          height: 60px;
+          margin: 0;
+        }
+        @keyframes textAnimate {
+          0%{
+            justify-content: flex-start;
+          }
+          100%{
+            justify-content: flex-end;
+          }
+        }
+        //.link--btn{
+        //  width: 150px;
+        //  white-space: nowrap;
+        //  overflow: hidden;
+        //  display: flex;
+        //  animation: textAnimate 3s 0s ease-in-out infinite;
+        //}
+      }
     }
   }
 }
@@ -583,100 +645,121 @@
   }
 }
 
-.footerEdit{
-  form{
+.footerEdit {
+  form {
     width: 280px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin: 20px 0;
-    label{
+
+    label {
       display: flex !important;
     }
   }
-  &__forms{
+
+  &__forms {
     display: flex;
     gap: 50px;
   }
-  &__socialForm{
+
+  &__socialForm {
     width: auto !important;
-    &__input{
+
+    &__input {
       display: flex;
       align-items: center;
       gap: 3px;
-      & > svg{
+
+      & > svg {
         cursor: pointer;
         color: $blue;
       }
     }
-    & > div{
+
+    & > div {
       display: flex;
       gap: 20px;
-      & > div{
+
+      & > div {
         width: 200px;
       }
     }
   }
 
-  .footer{
+  .footer {
     background: $bg-dgray;
     color: #fff;
     padding: 20px 0;
-    a{
+
+    a {
       color: #fff;
     }
-    li{
+
+    li {
       font-size: 14px;
       margin-bottom: 5px;
     }
-    .container{
+
+    .container {
       width: 90%;
       max-width: 1440px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
     }
-    &__top{
+
+    &__top {
       display: flex;
       gap: 30px;
-      h6{
+
+      h6 {
         color: #fff;
         font-size: 18px;
         font-weight: bold;
       }
-      & > div{
+
+      & > div {
         width: auto;
-        p{
+
+        p {
           margin-bottom: 13px;
         }
       }
-      &__scroll{
+
+      &__scroll {
         display: flex;
         gap: 40px;
         overflow-x: scroll;
         margin-left: 20px;
         width: 100%;
-        & > div{
+
+        & > div {
           min-width: 300px;
         }
-        &::-webkit-scrollbar{
+
+        &::-webkit-scrollbar {
           height: 3px;
           background: $lgray;
         }
-        &::-webkit-scrollbar-thumb{
+
+        &::-webkit-scrollbar-thumb {
           background: $green;
         }
       }
     }
-    &__middle{
+
+    &__middle {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-top: 30px;
-      img{
+
+      img {
         height: 50px;
       }
-      .socials{
+
+      .socials {
         display: flex;
         align-items: center;
         gap: 5px;
@@ -684,10 +767,132 @@
     }
   }
 
-  .page-footer__menu{
-    li{
+  .page-footer__menu {
+    li {
       width: auto;
       white-space: nowrap;
     }
+  }
+
+  .col-inp {
+    flex-direction: column;
+  }
+
+  .slide-img {
+    width: 250px;
+    margin-top: 50px;
+  }
+}
+
+.services-side{
+  @extend .helperCss
+}
+
+#services-blockForm {
+  background-color: #f3f6f5;
+  padding-bottom: 30px;
+  min-width: 800px;
+}
+
+#services-blockForm > div:nth-child(2) {
+  width: 70%;
+  margin-top: 30px;
+}
+
+#services-blockForm > div:nth-child(1) {
+  width: 30%;
+  margin-top: 30px;
+}
+
+#services-blockForm, .features-form {
+  .editor-wrapper, .editor-editor{
+    box-sizing: border-box;
+  }
+  .editor-wrapper{
+    margin-top: 20px;
+  }
+
+  .editor-toolbar{
+    background: $bg-lgray !important;
+    border: none !important;
+    border-radius: 40px;
+  }
+
+  .editor-editor{
+    background: $bg-lgray;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px;
+    border-radius: 10px;
+    .DraftEditor-root{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      color: #000;
+    }
+    p, span, b, i, u{
+      margin: 0;
+    }
+    .public-DraftStyleDefault-block{
+      margin: 0;
+    }
+  }
+
+  .editorColorPicker_btn{
+    position: relative;
+    //z-index: 2;
+  }
+  .editorColorPicker{
+    position: absolute;
+    left: -67px;
+    top: 48px;
+    z-index: 5;
+  }
+
+  .editorBtn{
+    background: $lgray !important;
+    height: 35px !important;
+    width: 35px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px !important;
+    color: #000;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover, &.rdw-option-active{
+      background: $blue !important;
+      color: #fff;
+      box-shadow: none !important;
+      img{
+        filter: grayscale(1) invert(1);
+      }
+    }
+  }
+}
+
+.prev-lang {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-form {
+  display: flex;
+  flex-direction: column;
+  .services-form-btn {
+    align-self: flex-end;
+    margin: 30px 20px 0 0;
+  }
+  .section-area {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accordions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }

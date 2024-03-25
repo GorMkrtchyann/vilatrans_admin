@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
-import {IconCaretDownFilled, IconMail, IconMapPins, IconPhone} from "@tabler/icons-react";
+import {IconCaretDownFilled, IconMail, IconPhone} from "@tabler/icons-react";
 import {FileUploadInput} from "../../../../components/fileUploadInput";
-import {Alert, LinearProgress, TextField} from "@mui/material";
+import {Alert, TextField} from "@mui/material";
 import {useEffect, useRef, useState} from "react";
 import {useForm} from "react-hook-form";
 import axios from "axios";

@@ -1,7 +1,7 @@
 import {FormControl, InputLabel, MenuItem, Select} from "@mui/material";
 import {useEffect, useState} from "react";
 import {OfficesInfo} from "./OfficesInfo";
-import {SlideEdit} from "../homeEdit/SlideEdit";
+import {SlideEdit} from "../homeEdit/slider/SlideEdit";
 import {MapEdit} from "./MapEdit";
 import {BannerEdit} from "./BannerEdit";
 
